@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hafıza Oyunu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header><h1>Hafıza Oyunu<span></h1></header>
+    <main>
+        <section>
+            <div class="game-status-details">
+                <div class="rating">
+                    <span class="yildiz">⭐</span>
+                    <span class="yildiz">⭐</span>
+                    <span class="yildiz">⭐</span>
+                    <span class="yildiz">⭐</span>
+                    <span class="yildiz">⭐</span>
+                </div>
+                <span class="move-counter" id="hamleSayac"></span>
+                <span class="timer" id="timer">0 dk 0 sn</span>
+                <button class="restart-btn" id="restartBtn" onClick="oyunBaslat()" aria-label="restart game">↻</button>
+            </div>
+            <table class="game-board" bgcolor="#000000">
+                <tbody class="game-grid">
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/1emoji.jpg" alt="emoji1">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/2emoji.jpg" alt="emoji2">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/3emoji.jpg" alt="emoji3">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/4emoji.jpg" alt="emoji4">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/5emoji.jpg" alt="emoji5">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/6emoji.jpg" alt="emoji6">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/7emoji.jpg" alt="emoji7">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/8emoji.jpg" alt="emoji8">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/1emoji.jpg" alt="emoji1">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/2emoji.jpg" alt="emoji2">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/3emoji.jpg" alt="emoji3">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/4emoji.jpg" alt="emoji4">
+                        </td>
+                    </tr>
+                    <tr class="game-grid-row">
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/5emoji.jpg" alt="emoji5">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/6emoji.jpg" alt="emoji6">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/7emoji.jpg" alt="emoji7">
+                        </td>
+                        <td class="game-card">
+                            <img class="game-card-img" src="img/8emoji.jpg" alt="emoji8">
+                        </td>
+                    </tr>
+                </tbody>               
+            </table>
+            <div class="restart-button-div">
+                <button class="restart-button brown-button" id="restartButton" onClick="oyunBaslat()">Tekrar Başlat ↻</button>
+            </div>
+        </section>
+        
+        <div class="modal" id="oyunBittiModel">
+            <div class="modal-content">
+                <span aria-label="close" role="button" class="close" id="kapanisModel">&times;</span>
+                <div class="modal-header">
+                    <h2>Oyun Bitti</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <p>Tebrikler!</p>
+                        <p>Oyunu <span id="toplamOyunHamle"></span> hamlede başarıyla tamamladınız.
+                            <br><span id="toplamOyunZamani"></span>
+                        </p>
+                        <p>Dereceniz: <span id="sonYildizDerece"></span></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="brown-button" onClick="tekrarOyna()">Tekrar Oyna &nbsp;✨</button>
+                </div>
+            </div>
+        </div>
+    </main><script src="jquery.js"></script>
+</body>
+</html>
